@@ -1,0 +1,159 @@
+body {
+    background-image: url('https://source.unsplash.com/random/1920x1080/?Gent');
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh;
+    font-family: 'Merriweather', serif;
+}
+
+.weather {
+    border: solid 1px rgb(161, 161, 161);
+    max-width: 250px;
+    min-height: 200px;
+    margin: 2rem;
+    padding: 2rem;
+    background-color: #000000d0;
+    color: rgb(255, 255, 255);
+    border-radius: 10%;
+    font-size: 20px;
+    z-index: 4;
+}
+
+.weather-upcoming-days {
+    border: solid 1px rgb(147, 147, 147);
+    max-width: 150px;
+    min-height: 200px;
+    margin: .2rem;
+    padding: 1rem;
+    background-color: #000000d0;
+    color: rgb(255, 255, 255);
+    border-radius: 10%;
+    font-size: 13px;
+    z-index: 4;
+}
+
+.upcoming-day {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.current-weather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+button {
+    margin-left: 15rem;
+    position: absolute;
+    cursor: pointer;
+    height: 47px;
+    width: 47px;
+    font-size: 20px;
+    border-radius: 24px;
+    transition: 100ms ease-in-out;
+}
+
+button:hover {
+    background: rgb(112, 112, 112);
+}
+
+.search-bar {
+    margin: .1rem;
+    height: 34px;
+    width: 220px;
+    border-radius: 20px;
+    font-size: 25px;
+}
+
+.search {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    text-align: center;
+}
+
+input{
+    text-transform: capitalize;
+}
+
+.search-bar-country {
+    display: none;
+}
+
+.weather-icon-text {
+    display: flex;
+    align-items: center;
+}
+
+.humidity {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.description {
+    margin-left: 5px;
+}
+
+.temp {
+    font-size: 30px;
+}
+
+.temp-upcoming-days {
+    font-size: 16px;
+}
+
+.clouds {
+    z-index: 2;
+    visibility: hidden;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('./Weathers/cloud.png');
+    animation: animate 90s alternate infinite;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: .4;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -5440px;
+    }
+}
+
+.rain {
+    visibility: hidden;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100vh;
+    background-image: url('./Weathers/rain.png');
+    animation: rain .3s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes rain {
+    0% {background-position: 0px 0px;}
+    100%{background-position: 150px 400px;}
+}
